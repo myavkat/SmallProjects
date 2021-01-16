@@ -7,18 +7,20 @@ namespace NumberGuessGame
         static void Main(string[] args)
         {
 
-            int tries = 0;
-            int score = 0;
+            
             Console.WriteLine("Hello! Do you want to play number guessing? (Answer with Yes or No)");
             Console.WriteLine();
             string response = Console.ReadLine();
+            response = response.ToLower();
             Console.WriteLine();
-            while (response != "Yes")
+            while (response != "yes")
             {
-                if (response == "No")
+                if (response == "no")
                 {
-                    Console.WriteLine("I'll wait here for you!");
-                    System.Threading.Thread.Sleep(2000);
+                    Console.WriteLine("Made by MyavKat");
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to exit!");
+                    Console.ReadKey(true);
                     System.Environment.Exit(0);
                 }
                 else
@@ -26,10 +28,13 @@ namespace NumberGuessGame
                     Console.WriteLine("I didn't understand what you said. Please write carefully!");
                     Console.WriteLine();
                     response = Console.ReadLine();
+                    response = response.ToLower();
                     Console.WriteLine();
                 }
             }
 
+            int tries = 0;
+            int score = 0;
             int range = 3;
 
             //Choosing level  
@@ -77,7 +82,7 @@ namespace NumberGuessGame
                 case 5:
                     Console.WriteLine("Difficulty: Custom");
                     Console.WriteLine();
-                    Console.Write("Define x :");
+                    Console.Write("Choose the range :");
                     string rangeStr = Console.ReadLine();
                     Int32.TryParse(rangeStr, out range);
 
@@ -94,20 +99,15 @@ namespace NumberGuessGame
                     break;
             }
             Console.WriteLine();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(500);
 
-            while (response == "Yes")
+            while (response == "yes")
             {
                 //Computer picks a number from range
 
                 Random random = new Random();
 
-                int computerPick = random.Next(range + 1);
-
-                if (computerPick == 0)
-                {
-                    computerPick = 1;
-                }
+                int computerPick = random.Next(0,range + 1);
 
                 Console.WriteLine("Okay! I picked a number from 1 to " + range + ". Guess it!");
 
@@ -150,15 +150,20 @@ namespace NumberGuessGame
 
 
                 response = Console.ReadLine();
+                response = response.ToLower();
                 Console.WriteLine();
-                while (response != "Yes" && response != "No")
+                while (response != "yes" && response != "no")
                 {
                     Console.WriteLine("I didn't understand what you said. Please write carefully!");
                     response = Console.ReadLine();
+                    response = response.ToLower();
                 }
-                if (response == "No")
+                if (response == "no")
                 {
+                    Console.WriteLine("Thanks for playing!");
+                    Console.WriteLine();
                     Console.WriteLine("Made by MyavKat");
+                    Console.WriteLine();
                     Console.WriteLine("Press any key to exit!");
                     Console.ReadKey(true);
                 }
