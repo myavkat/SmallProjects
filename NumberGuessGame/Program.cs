@@ -7,7 +7,7 @@ namespace NumberGuessGame
         static void Main(string[] args)
         {
 
-            
+
             Console.WriteLine("Hello! Do you want to play number guessing? (Answer with Yes or No)");
             Console.WriteLine();
             string response = Console.ReadLine();
@@ -107,7 +107,7 @@ namespace NumberGuessGame
 
                 Random random = new Random();
 
-                int computerPick = random.Next(1,range + 1);
+                int computerPick = random.Next(1, range + 1);
 
                 Console.WriteLine("Okay! I picked a number from 1 to " + range + ". Guess it!");
 
@@ -117,11 +117,17 @@ namespace NumberGuessGame
                 //User inputs a number
 
                 int guess = 0;
+                Console.Write("What's your guess? ");
+
+                string guessStr = Console.ReadLine();
+
+                Int32.TryParse(guessStr, out guess);
+                tries++;
                 while (guess <= 0 || guess > range)
                 {
-                    Console.Write("What's your guess ? ");
+                    Console.Write("Guess in the range! ");
 
-                    string guessStr = Console.ReadLine();
+                    guessStr = Console.ReadLine();
 
                     Int32.TryParse(guessStr, out guess);
                     tries++;
@@ -140,14 +146,23 @@ namespace NumberGuessGame
                         tries++;
                     }
 
-                    string guessStr = Console.ReadLine();
+                    guessStr = Console.ReadLine();
                     Int32.TryParse(guessStr, out guess);
-                }
 
+                    while (guess <= 0 || guess > range)
+                    {
+                        Console.Write("Guess in the range! ");
+
+                        guessStr = Console.ReadLine();
+
+                        Int32.TryParse(guessStr, out guess);
+                        tries++;
+                    }
+                }
+                
                 score++;
                 Console.WriteLine("Right! You guessed " + tries + " times in total. You have won " + score + " times.");
                 Console.WriteLine("Do you want to play again ? (Answer with Yes or No)");
-
 
                 response = Console.ReadLine();
                 response = response.ToLower();
@@ -167,11 +182,7 @@ namespace NumberGuessGame
                     Console.WriteLine("Press any key to exit!");
                     Console.ReadKey(true);
                 }
-
             }
-
         }
-
     }
-
 }
