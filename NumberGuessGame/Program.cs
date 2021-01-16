@@ -107,7 +107,7 @@ namespace NumberGuessGame
 
                 Random random = new Random();
 
-                int computerPick = random.Next(0,range + 1);
+                int computerPick = random.Next(1,range + 1);
 
                 Console.WriteLine("Okay! I picked a number from 1 to " + range + ". Guess it!");
 
