@@ -137,12 +137,12 @@ namespace NumberGuessGame
                 {
                     if (guess < computerPick)
                     {
-                        Console.WriteLine("Guess Higher!");
+                        Console.Write("Guess Higher! ");
                         tries++;
                     }
                     else
                     {
-                        Console.WriteLine("Guess Lower!");
+                        Console.Write("Guess Lower! ");
                         tries++;
                     }
 
