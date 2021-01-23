@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuessGame", "NumberGuessGame\NumberGuessGame.csproj", "{86FE16D6-4EA0-48BE-9584-5D7898A56476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberGuessGame", "NumberGuessGame\NumberGuessGame.csproj", "{86FE16D6-4EA0-48BE-9584-5D7898A56476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCollecterSorter", "FileCollecterSorter\FileCollecterSorter.csproj", "{15DC4AFB-F2FA-435C-A6CA-AE6855028CB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{86FE16D6-4EA0-48BE-9584-5D7898A56476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86FE16D6-4EA0-48BE-9584-5D7898A56476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86FE16D6-4EA0-48BE-9584-5D7898A56476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DC4AFB-F2FA-435C-A6CA-AE6855028CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DC4AFB-F2FA-435C-A6CA-AE6855028CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DC4AFB-F2FA-435C-A6CA-AE6855028CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DC4AFB-F2FA-435C-A6CA-AE6855028CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -38,15 +38,11 @@ namespace NumberGuessGame
             int range = 3;
 
             //Choosing level  
-            Console.WriteLine("Difficulty levels:");
-            Console.WriteLine("1- Easy (from 1 to 3)");
-            Console.WriteLine("2- Normal (from 1 to 10)");
-            Console.WriteLine("3- Hard (from 1 to 1000)");
-            Console.WriteLine("4- Impossible (fron 1 to 2147483646)");
-            Console.WriteLine("5- Custom (from 1 to x)");
-            Console.WriteLine();
-
-            Console.Write("Enter the number of difficulty level : ");
+            Console.WriteLine("Difficulty levels:\n1- Easy (from 1 to 3)\n2- Normal (from 1 to 10)" +
+                "\n3- Hard (from 1 to 1000)\n4- Impossible (from 1 to 2147483646)\n5- Custom (from 1 to x)\n");
+            string enterDifficulty = "Enter the number of difficulty level : ";
+            Console.Write(enterDifficulty);
+            
             string difficultyStr = Console.ReadLine();
 
             Console.WriteLine();
@@ -57,7 +53,7 @@ namespace NumberGuessGame
 
             while (difficulty < 1 || 5 < difficulty)
             {
-                Console.Write("Enter the number of difficulty level : ");
+                Console.Write(enterDifficulty);
                 difficultyStr = Console.ReadLine();
 
                 Int32.TryParse(difficultyStr, out difficulty);
@@ -99,7 +95,6 @@ namespace NumberGuessGame
                     break;
             }
             Console.WriteLine();
-            System.Threading.Thread.Sleep(500);
 
             while (response == "yes")
             {

@@ -1,0 +1,9 @@
+﻿This does:
+Gets a directory of a folder and a file type from user
+Opens folders in that folder and searches for files from that type.
+Collects them in a folder in mother folder and numerize them starting from 1.
+
+That is all!
+
+I made this to collect all manga chapters in a folder with right order and since this does work alphabetically it works good.
+(Except I needed to rename folders that have 1 and 2 digit to 3 digit with adding 0 at the beginnings of numbers ex: 1 -> 001.)
