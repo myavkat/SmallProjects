@@ -42,16 +42,13 @@ namespace LargestPrimeFactor
 
             for (long i = 3; i < input; i+=2)
             {
+                add = true;
                 foreach (long primeNumber in primeNumbers)
                 {
                     if (i/primeNumber==i/(double)primeNumber)
                     {
                         add = false;
                         break;
-                    }
-                    else
-                    {
-                        add = true;
                     }
                 }
                 if (add)
